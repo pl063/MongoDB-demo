@@ -1,0 +1,13 @@
+    <% include _header %>
+    
+    <h1>Welcome</h1>
+
+    <% users.foreach((user) => { %> 
+        <a href="/users/<%= user.username %> ">
+            <%= user.name() %> 
+        </a>
+        <% if (user.bio) { %>
+            <div><%= user.bio %> </div> 
+        <% } %>
+        
+        <% }) %> 
