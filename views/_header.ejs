@@ -9,7 +9,7 @@
     <body>
         <a href="/">Learn about me!</a>
 
-        <% if (currentUser) %>
+        <% if (currentUser) {%>
             <li>
                 <a href="/edit">Hello, <%=currentUser.name() %></a>
             </li> 

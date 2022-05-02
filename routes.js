@@ -8,7 +8,12 @@
                     .sort({"createdAt": "descending"})
                     .exec(function(err, users) {
                         if(err) {return next(err)};
-                        res.render("index", {users});
+                        if(users && users !== "") {
+                            res.render("index", {users});
+                        } else {
+                            res.render("index", {user: ["tEO"]})
+                        }
+                       
                     })
     })
 
